@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PedAnims>
+  <Anim dict="pubg@VD_1" name="dance" />
+  <Anim dict="pubg@VD_2" name="dance" />
+  <Anim dict="pubg@VD_3" name="dance" />
+  <Anim dict="pubg@VD_4" name="dance" />
+  <Anim dict="pubg@VD_11" name="dance" />
+  <Anim dict="pubg@VD_14" name="dance" />
+  <Anim dict="pubg@VD_20" name="dance" />
+  <Anim dict="pubg@VD_37" name="dance" />
+  <Anim dict="pubg@VD_41" name="dance" />
+  <Anim dict="pubg@VD_44" name="dance" />
+  <Anim dict="pubg@VD_52" name="dance" />
+  <Anim dict="pubg@VD_56" name="dance" />
+  <Anim dict="pubg@VD_62" name="dance" />
+  <Anim dict="pubg@VD_74" name="dance" />
+  <Anim dict="pubg@VD_81" name="dance" />
+  <Anim dict="pubg@VD_85" name="dance" />
+  <Anim dict="pubg@VD_86" name="dance" />
+  <Anim dict="pubg@VD_99" name="dance" />
+  <Anim dict="pubg@VD_102" name="dance" />
+  <Anim dict="pubg@VD_110" name="dance" />
+  <Anim dict="pubg@VD_114" name="dance" />
+  <Anim dict="pubg@VD_131" name="dance" />
+  <Anim dict="pubg@VD_175" name="dance" />
+  <Anim dict="pubg@VD_BBOOM_BBOOM" name="dance" />
+  <Anim dict="pubg@VD_MALATANGHULU" name="dance" />
+</PedAnims>

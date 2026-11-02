@@ -8,6 +8,7 @@
 * (at your option) any later version.
 */
 #include "PedAnimation.h"
+#include "SparkyashhDanceCatalog.h"
 
 #include "..\macros.h"
 
@@ -424,6 +425,47 @@ namespace sub
 		}
 	}
 
+
+    // Each entry uses its own playback settings. Restore the user's settings
+    // after drawing/activating options; reuse Menyoo's Spooner integration.
+    void SparkyashhDancesMenu()
+    {
+        static std::vector<Sparkyashh::Dance> dances;
+        static std::string error;
+        static bool loaded = false;
+        AddTitle("SPARKYASHH - PUBG Dances");
+        AddTickol("Stop Animation", true, AnimationStopAnimationCallback, AnimationStopAnimationCallback, TICKOL::CROSS);
+        bool reload = false;
+        AddOption("Reload Catalogue", reload);
+        if (!loaded || reload) {
+            const auto path = GetPathffA(Pathff::Main, true) + "SPARKYASHH_Dances.xml";
+            loaded = true;
+            if (!Sparkyashh::Load(path.c_str(), dances, error)) {
+                Game::Print::PrintBottomCentre("SPARKYASHH: " + error);
+            }
+        }
+        if (!error.empty()) AddBreak("Catalogue error - reload after fixing XML");
+        AddBreak("Adaptation: SPARKYASHH | MP Female");
+        struct Restore {
+            float speed=g_customAnimSpeed, mult=g_customAnimSpeedMult, rate=g_CustomAnimRate;
+            int duration=g_customAnimDuration, flag=g_customAnimFlag;
+            bool lock=g_customAnimLockPos;
+            ~Restore() {
+                g_customAnimSpeed=speed; g_customAnimSpeedMult=mult; g_CustomAnimRate=rate;
+                g_customAnimDuration=duration; g_customAnimFlag=flag; g_customAnimLockPos=lock;
+            }
+        } restore;
+        g_customAnimSpeed=4.0f; g_customAnimSpeedMult=-4.0f;
+        g_CustomAnimRate=0.0f; g_customAnimDuration=-1; g_customAnimLockPos=false;
+        for (const auto& dance : dances) {
+            g_customAnimFlag=dance.loop ? AnimFlag::Loop : AnimFlag::Normal;
+            bool activated = false;
+            AddAnimOption(dance.name + (dance.loop ? " [Loop]" : " [Once]"), dance.dict, dance.clip, activated);
+            if (activated && !HAS_ANIM_DICT_LOADED(dance.dict.c_str()))
+                Game::Print::PrintBottomCentre("SPARKYASHH: animation unavailable. Check the dance DLC installation.");
+        }
+    }
+
 	void PedAnimationMenu()
 	{
 		auto& searchStr = dict;
@@ -489,6 +531,7 @@ namespace sub
 		AddOption("All Animations", null, nullFunc, SUB::ANIMATIONSUB_ALLPEDANIMS);
 		AddOption("Custom Input", null, nullFunc, SUB::ANIMATIONSUB_CUSTOM);
 		AddOption("Favourites", null, nullFunc, SUB::ANIMATIONSUB_FAVOURITES);
+		AddOption("SPARKYASHH - PUBG Dances", null, nullFunc, SUB::ANIMATIONSUB_SPARKYASHH);
 		AddOption("Settings", null, nullFunc, SUB::ANIMATIONSUB_SETTINGS);
 
 
@@ -1710,3 +1753,4 @@ REGISTER_SUBMENU(AnimationTaskScenarios,		   sub::AnimationTaskScenarios::Animat
 REGISTER_SUBMENU(AnimationTaskScenarios2,		   sub::AnimationTaskScenarios::AnimationTaskScenarios2)
 REGISTER_SUBMENU(FACIALMOOD,                       sub::FacialAnims::FacialMoodMenu)
 REGISTER_SUBMENU(MOVEMENTGROUP,                    sub::MovementGroupMenu)
+REGISTER_SUBMENU(ANIMATIONSUB_SPARKYASHH, sub::SparkyashhDancesMenu)

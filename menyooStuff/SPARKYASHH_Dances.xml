@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SparkyashhDances version="1" author="SPARKYASHH">
+  <Dance name="Dance 1 (unidentified)" dict="pubg@VD_1" clip="dance" loop="false" durationSeconds="18.741671" />
+  <Dance name="Dance 2 (unidentified)" dict="pubg@VD_2" clip="dance" loop="true" durationSeconds="8.026594" />
+  <Dance name="Dance 3 (unidentified)" dict="pubg@VD_3" clip="dance" loop="true" durationSeconds="15.967318" />
+  <Dance name="Dance 4 (unidentified)" dict="pubg@VD_4" clip="dance" loop="true" durationSeconds="21.300745" />
+  <Dance name="Victory Dance 11" dict="pubg@VD_11" clip="dance" loop="false" durationSeconds="32.566666" />
+  <Dance name="Victory Dance 14" dict="pubg@VD_14" clip="dance" loop="true" durationSeconds="15.05" />
+  <Dance name="Victory Dance 20" dict="pubg@VD_20" clip="dance" loop="false" durationSeconds="31.766666" />
+  <Dance name="Victory Dance 37" dict="pubg@VD_37" clip="dance" loop="true" durationSeconds="7.417447" />
+  <Dance name="Victory Dance 41" dict="pubg@VD_41" clip="dance" loop="true" durationSeconds="18.350641" />
+  <Dance name="Victory Dance 44" dict="pubg@VD_44" clip="dance" loop="true" durationSeconds="17.549999" />
+  <Dance name="Victory Dance 52" dict="pubg@VD_52" clip="dance" loop="true" durationSeconds="12.785193" />
+  <Dance name="Victory Dance 56" dict="pubg@VD_56" clip="dance" loop="true" durationSeconds="15.293192" />
+  <Dance name="Victory Dance 62" dict="pubg@VD_62" clip="dance" loop="true" durationSeconds="7.956375" />
+  <Dance name="Victory Dance 74" dict="pubg@VD_74" clip="dance" loop="true" durationSeconds="35.827042" />
+  <Dance name="Victory Dance 81" dict="pubg@VD_81" clip="dance" loop="true" durationSeconds="16.582043" />
+  <Dance name="Victory Dance 85" dict="pubg@VD_85" clip="dance" loop="true" durationSeconds="15.716666" />
+  <Dance name="Victory Dance 86" dict="pubg@VD_86" clip="dance" loop="true" durationSeconds="14.837193" />
+  <Dance name="Victory Dance 99" dict="pubg@VD_99" clip="dance" loop="true" durationSeconds="14.835707" />
+  <Dance name="Victory Dance 102" dict="pubg@VD_102" clip="dance" loop="true" durationSeconds="29.835127" />
+  <Dance name="Victory Dance 110" dict="pubg@VD_110" clip="dance" loop="true" durationSeconds="15.557623" />
+  <Dance name="Victory Dance 114" dict="pubg@VD_114" clip="dance" loop="true" durationSeconds="19.06731" />
+  <Dance name="Victory Dance 131" dict="pubg@VD_131" clip="dance" loop="true" durationSeconds="29.267838" />
+  <Dance name="Victory Dance 175" dict="pubg@VD_175" clip="dance" loop="true" durationSeconds="14.733334" />
+  <Dance name="BBoom BBoom" dict="pubg@VD_BBOOM_BBOOM" clip="dance" loop="false" durationSeconds="77.138351" />
+  <Dance name="MALATANGHLU" dict="pubg@VD_MALATANGHULU" clip="dance" loop="false" durationSeconds="81.009216" />
+</SparkyashhDances>
